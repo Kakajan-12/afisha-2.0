@@ -28,7 +28,6 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   @media (max-width: 990px) {
-    top: 55%;
     scale: 1.5;
   }
 }
@@ -42,7 +41,6 @@ a {
   height: 100%;
   width: 100%;
 }
-
 .main-arrow {
   position: absolute;
   width: 150px;
@@ -61,6 +59,12 @@ a {
     width: 120px;
     height: 120px;
   }
+}
+@media (hover:none) {
+  .main-arrow:hover {
+  width: 170px;
+  height: 170px;
+}
 }
 .main-arrow:hover {
   width: 170px;

@@ -36,7 +36,6 @@ a {
 }
 @media (max-width: 990px) {
   #main-video {
-    top: 55%;
     scale: 1.5;
   }
 }
@@ -82,6 +81,12 @@ a {
   }
 }
 
+@media (hover: none) {
+  .main-arrow:hover {
+    width: 170px;
+    height: 170px;
+  }
+}
 .main-arrow:hover {
   width: 170px;
   height: 170px;
