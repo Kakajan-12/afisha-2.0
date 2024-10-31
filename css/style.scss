@@ -99,9 +99,9 @@ a {
   img {
     transform: rotate(-90deg);
   }
-  @media (max-width:576px) {
+  @media (max-width:390px) {
     bottom: unset;
-    top: 85%;
+    top: 70%;
   }
 }
 
