@@ -36,7 +36,7 @@ a {
 }
 @media (max-width: 990px) {
   #main-video {
-    top: 55%;
+    top: 65%;
     scale: 1.5;
   }
 }
