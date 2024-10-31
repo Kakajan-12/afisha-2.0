@@ -34,6 +34,12 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+@media (max-width: 990px) {
+  #main-video {
+    top: 55%;
+    scale: 1.5;
+  }
+}
 
 .bg {
   background: rgba(0, 0, 0, 0.4);
@@ -68,6 +74,12 @@ a {
 }
 .main-arrow img {
   width: 50px;
+}
+@media (max-width: 768px) {
+  .main-arrow {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .main-arrow:hover {
@@ -140,6 +152,21 @@ a {
   mix-blend-mode: lighten;
   -webkit-transition: all ease-in-out 0.7s;
   transition: all ease-in-out 0.7s;
+}
+@media (max-width: 768px) {
+  .main-text {
+    font-size: 7em;
+  }
+}
+@media (max-width: 576px) {
+  .main-text {
+    font-size: 4em;
+  }
+}
+@media (max-width: 457px) {
+  .main-text {
+    font-size: 3em;
+  }
 }
 
 .main-text:nth-child(1) {
@@ -236,6 +263,18 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+@media (max-width: 768px) {
+  #second {
+    scale: 1.4;
+    top: 60%;
+  }
+}
+@media (max-width: 576px) {
+  #second {
+    scale: 1.8;
+    top: 75%;
+  }
+}
 
 .third {
   height: 100%;
@@ -253,6 +292,16 @@ a {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
+}
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 576px) {
+  .cards {
+    grid-template-columns: auto;
+  }
 }
 
 .card-body {
@@ -383,6 +432,14 @@ footer {
   margin: auto;
   max-width: 500px;
 }
+@media (max-width: 576px) {
+  .footer-subscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .footer-subscribe input {
   font-weight: 500;
   color: #a79fbe;
@@ -411,6 +468,12 @@ footer {
   border: none;
   margin-left: -100px;
 }
+@media (max-width: 576px) {
+  .footer-subscribe button {
+    margin-left: unset;
+    margin-top: 10px;
+  }
+}
 
 .footer-contacts {
   padding: 80px 0;
@@ -420,6 +483,17 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 576px) {
+  .footer-contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .footer-contact {

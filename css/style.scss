@@ -27,6 +27,10 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width: 990px) {
+    top: 55%;
+    scale: 1.5;
+  }
 }
 .bg {
   background: rgba(0, 0, 0, 0.4);
@@ -52,6 +56,10 @@ a {
   z-index: 1;
   img {
     width: 50px;
+  }
+  @media (max-width:768px) {
+    width: 120px;
+    height: 120px;
   }
 }
 .main-arrow:hover {
@@ -104,6 +112,15 @@ a {
   -webkit-text-stroke: 3px #fff;
   mix-blend-mode: lighten;
   transition: all ease-in-out 0.7s;
+  @media (max-width:768px) {
+    font-size: 7em;
+  }
+  @media (max-width:576px) {
+    font-size: 4em;
+  }
+  @media (max-width:457px) {
+    font-size: 3em;
+  }
 }
 .main-text:nth-child(1) {
   left: -100%;
@@ -175,6 +192,14 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media (max-width:768px) {
+    scale: 1.4;
+    top: 60%;
+  }
+  @media (max-width:576px) {
+    scale: 1.8;
+    top: 75%;
+  }
 }
 
 .third {
@@ -191,6 +216,12 @@ a {
   display: grid;
   grid-template-columns: auto auto auto;
   gap: 20px;
+  @media (max-width: 768px) {
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: 576px) {
+    grid-template-columns: auto;
+  }
 }
 
 .card-body {
@@ -285,6 +316,9 @@ footer {
   justify-content: center;
   margin: auto;
   max-width: 500px;
+  @media (max-width:576px) {
+    flex-direction: column;
+  }
 
   input {
     font-weight: 500;
@@ -313,12 +347,20 @@ footer {
     background-color: #5a24b1;
     border: none;
     margin-left: -100px;
+    @media (max-width:576px) {
+      margin-left: unset;
+      margin-top: 10px;
+    }
   }
 }
 .footer-contacts {
   padding: 80px 0;
   display: flex;
   justify-content: space-between;
+  @media (max-width:576px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer-contact {
   max-width: 300px;
