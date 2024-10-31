@@ -99,6 +99,10 @@ a {
   img {
     transform: rotate(-90deg);
   }
+  @media (max-width:576px) {
+    bottom: unset;
+    top: 85%;
+  }
 }
 
 .main-content {
