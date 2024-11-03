@@ -99,10 +99,10 @@ a {
   img {
     transform: rotate(-90deg);
   }
-  @media (max-width:490px) {
-    bottom: unset;
-    top: 70%;
-  }
+  // @media (max-width:490px) {
+  //   bottom: unset;
+  //   top: 70%;
+  // }
 }
 
 .main-content {
@@ -182,6 +182,9 @@ a {
   width: 100%;
   img {
     width: 100%;
+    @media (max-width: 576px) {
+      height: 100px;
+    }
   }
 }
 .second-romb-bottom {
@@ -191,6 +194,9 @@ a {
   transform: rotate(-180deg) translateY(99%);
   img {
     width: 100%;
+    @media (max-width: 576px) {
+      height: 100px;
+    }
   }
 }
 

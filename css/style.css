@@ -127,12 +127,6 @@ a {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-@media (max-width: 490px) {
-  .main-arrow-bottom {
-    bottom: unset;
-    top: 70%;
-  }
-}
 
 .main-content {
   display: -webkit-box;
@@ -249,6 +243,11 @@ a {
 .second-romb-top img {
   width: 100%;
 }
+@media (max-width: 576px) {
+  .second-romb-top img {
+    height: 100px;
+  }
+}
 
 .second-romb-bottom {
   position: absolute;
@@ -259,6 +258,11 @@ a {
 }
 .second-romb-bottom img {
   width: 100%;
+}
+@media (max-width: 576px) {
+  .second-romb-bottom img {
+    height: 100px;
+  }
 }
 
 #second {
