@@ -127,7 +127,7 @@ a {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
 }
-@media (max-width: 390px) {
+@media (max-width: 490px) {
   .main-arrow-bottom {
     bottom: unset;
     top: 70%;
