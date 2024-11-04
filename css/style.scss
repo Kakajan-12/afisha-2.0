@@ -139,46 +139,63 @@ a {
   left: 175px;
   top: 33%;
   transform: translate(-50%, -50%);
+  animation: left 1s;
   @media (max-width: 768px) {
     left: 125px;
     top: 35%;
   }
   @media (max-width: 576px) {
-    left: 105px;
+    left: 85px;
     top: 35%;
-  }
-}
-
-@keyframes mainText {
-  0% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.5;
-  }
-  100% {
-    scale: 1;
   }
 }
 
 .main-text-top {
   top: 180px;
+  animation: top 1s;
   @media (max-width:768px) {
     top: 140px;
   }
 }
 
 .main-text-right {
+  animation: right 1s;
   right: 5% !important;
   top: 35%;
 }
 
 .main-text-bottom {
+  animation: bottom 1s;
   bottom: 180px;
   transform: translate(0, 50%);
   @media (max-width:768px) {
     bottom: 140px;
   }
+}
+
+.main-text-bottom .animation {
+  animation: bottom 1s;
+}
+
+@keyframes left {
+  0%   {scale: 1}
+  50%  {scale: 1.2;}
+  100% {scale:1;}
+}
+@keyframes top {
+  0%   {scale: 1}
+  50%  {scale: 1.2;}
+  100% {scale:1;}
+}
+@keyframes right {
+  0%   {scale: 1}
+  50%  {scale: 1.2;}
+  100% {scale:1;}
+}
+@keyframes bottom {
+  0%   {scale: 1}
+  50%  {scale: 1.2;}
+  100% {scale:1;}
 }
 
 .second {
