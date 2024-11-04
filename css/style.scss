@@ -272,17 +272,18 @@ a {
   padding: 25px;
   
   button {
-    background-color: #000;
+    background-color: transparent;
     bottom: 16px;
     display: flex;
     justify-content: center;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 5px;
     padding: 12px 24px;
     font-size: clamp(14px, 1vw, 16px);
     font-weight: 600;
-    color: #fff;
-    border: none;
+    color: #000;
+    border: #000 solid 1px;
+    cursor: pointer;
   }
 }
 
