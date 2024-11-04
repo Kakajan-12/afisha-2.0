@@ -159,7 +159,7 @@ a {
   -webkit-transition: all ease-in-out 0.7s;
   transition: all ease-in-out 0.7s;
 }
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .main-text {
     font-size: 7em;
   }
@@ -212,6 +212,32 @@ a {
   bottom: 50%;
   -webkit-transform: translate(0, 50%);
           transform: translate(0, 50%);
+}
+
+@media (max-width: 576px) {
+  .main-text-left.active {
+    left: 25% !important;
+    top: 35%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-text-top.active {
+    top: 20% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-text-right.active {
+    right: 20% !important;
+    top: 35%;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-text-bottom.active {
+    bottom: 20% !important;
+  }
 }
 
 .second {

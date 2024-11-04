@@ -124,7 +124,7 @@ a {
   -webkit-text-stroke: 2px #fff;
   mix-blend-mode: lighten;
   transition: all ease-in-out 0.7s;
-  @media (max-width: 768px) {
+  @media (max-width: 990px) {
     font-size: 7em;
   }
   @media (max-width: 576px) {
@@ -161,6 +161,32 @@ a {
 .main-text:nth-child(4).active {
   bottom: 50%;
   transform: translate(0, 50%);
+}
+
+.main-text-left.active {
+  @media (max-width: 576px) {
+    left: 25% !important;
+    top: 35%;
+  }
+}
+
+.main-text-top.active {
+  @media (max-width: 576px) {
+    top: 20% !important;
+  }
+}
+
+.main-text-right.active {
+  @media (max-width: 576px) {
+    right: 20% !important;
+    top: 35%;
+  }
+}
+
+.main-text-bottom.active {
+  @media (max-width: 576px) {
+    bottom: 20% !important;
+  }
 }
 
 .second {
@@ -270,7 +296,7 @@ a {
   align-items: start;
   height: 100%;
   padding: 25px;
-  
+
   button {
     background-color: transparent;
     bottom: 16px;
@@ -314,7 +340,7 @@ a {
   height: 100%;
 }
 
-.card-link{
+.card-link {
   font-family: "Inter", "Arial", "sans-serif";
   font-weight: normal;
   font-size: 15px;
