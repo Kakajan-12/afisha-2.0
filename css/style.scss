@@ -153,7 +153,7 @@ a {
 .main-text-top {
   top: 180px;
   animation: top 1s;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     top: 140px;
   }
 }
@@ -166,10 +166,33 @@ a {
 
 .main-text-bottom {
   animation: bottom 1s;
-  bottom: 180px;
+  bottom: 250px;
   transform: translate(0, 50%);
-  @media (max-width:768px) {
-    bottom: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 768px) {
+    bottom: 175px;
+  }
+}
+
+.main-first-span {
+  font-size: 3rem;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 1rem;
+  }
+}
+
+.main-second-span {
+  font-size: 4rem;
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 2rem;
   }
 }
 
@@ -178,24 +201,48 @@ a {
 }
 
 @keyframes left {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @keyframes top {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @keyframes right {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @keyframes bottom {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 .second {
