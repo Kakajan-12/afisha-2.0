@@ -4,65 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afisha 2.0</title>
+    <title>Афиша нового поколения</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <section class="main">
-        <div class="main-animation">
-            <div class="main-bg">
-                <video playsinline loop muted autoplay id="main-video" src="#">
-                </video>
-                <div class="bg"></div>
+        <div class="animation anim-dark" data-aos="slide-effect-2" style="z-index: 10;">
+            <div class="main-animation">
+                <div class="main-bg">
+                    <video playsinline loop muted autoplay id="main-video" src="#">
+                    </video>
+                    <div class="bg"></div>
+                </div>
+                <div class="main-arrows">
+                    <div class="main-arrow main-arrow-left">
+                        <img src="./source/images/arrow.svg" alt="left">
+                    </div>
+                    <div class="main-arrow main-arrow-top">
+                        <img src="./source/images/arrow.svg" alt="top">
+                    </div>
+                    <div class="main-arrow main-arrow-right">
+                        <img src="./source/images/arrow.svg" alt="right">
+                    </div>
+                    <div class="main-arrow main-arrow-bottom">
+                        <img src="./source/images/arrow.svg" alt="bottom">
+                    </div>
+                </div>
+                <div class="main-content">
+                    <div class="main-text main-text-left">
+                        Игра
+                    </div>
+                    <div class="main-text main-text-top">
+                        Профиль
+                    </div>
+                    <div class="main-text main-text-right">
+                        Досуг
+                    </div>
+                    <div class="main-text main-text-bottom">
+                        <span class="main-first-span">Куда</span>
+                        <span class="main-second-span">Пойти</span>
+                        Сейчас
+                    </div>
+                </div>
             </div>
-            <div class="main-arrows">
-                <div class="main-arrow main-arrow-left">
-                    <img src="./source/images/arrow.svg" alt="left">
+        </div>
+
+    </section>
+    <section class="second">
+        <!-- <div class="animation anim-dark" data-aos="slide-effect-2"> -->
+            <div class="wrapper animation-inner">
+                <div class="background overlay">
+                    <video playsinline loop muted autoplay id="responsiveVideo" src="#">
+                    </video>
                 </div>
-                <div class="main-arrow main-arrow-top">
-                    <img src="./source/images/arrow.svg" alt="top">
+
+                <div class="content-section d-flex justify-content-center align-items-center">
+                    <div class="v-lines">
+                        <div class="vline-1"></div>
+                        <div class="vline-2"></div>
+                        <div class="vline-3"></div>
+                        <div class="vline-4"></div>
+                    </div>
+                    <div class="container">
+                        <div class="center-content text-light align-self-center" style="height: 100%;">
+
+                            <span class="animation anim-light" data-aos="slide-effect-btn" data-aos-delay="500">
+                                <a href="javascript:void(0);"
+                                    class="btn btn-lg btn-outline d-flex justify-content-center align-items-center"
+                                    data-toggle="modal" data-target="#subscribeModal">
+                                    <p class="link-text">
+                                        <span class="link">AfishaMoskva.ru</span>Афиша нового поколения
+                                    </p>
+                                </a>
+                            </span>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="main-arrow main-arrow-right">
-                    <img src="./source/images/arrow.svg" alt="right">
-                </div>
-                <div class="main-arrow main-arrow-bottom">
-                    <img src="./source/images/arrow.svg" alt="bottom">
+
+            </div>
+
+        <!-- </div> -->
+
+
+        <div class="modal modal-center modal-dark" id="subscribeModal" tabindex="-1" role="dialog"
+            aria-labelledby="subscribeModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="pe-7s-close pe-2x"></i></span>
+                        </button>
+                        <h2 class="modal-title" id="subscribeModalLabel">Subscribe</h2>
+                        <p class="lead text-center text-light p-2">
+                            Subscribe to our newsletter to receive updates about our super awesome project.
+                        </p>
+                        <form class="pr-4 pl-4 pb-4" id="subscribeform" action="php/subscribe.php" method="post">
+                            <div class="form-group md-form">
+                                <input type="text" name="fname" class="form-control input-material" autocomplete="off"
+                                    required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class>First Name</label>
+                            </div>
+                            <div class="form-group md-form">
+                                <input type="email" name="email" class="form-control input-material" autocomplete="off"
+                                    required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class>Email Address</label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-lg btn-outline" id="js-subscribe-btn">Subscribe
+                                    Now</button>
+                                <div id="js-subscribe-result" data-success-msg="Success, Please check your email."
+                                    data-error-msg="Oops! Something went wrong"></div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="main-content">
-                <div class="main-text main-text-left">
-                    Игра
-                </div>
-                <div class="main-text main-text-top">
-                    Профиль
-                </div>
-                <div class="main-text main-text-right">
-                    Досуг
-                </div>
-                <div class="main-text main-text-bottom">
-                    <span class="main-first-span">Куда</span>
-                    <span class="main-second-span">Пойти</span>
-                    Сейчас
+        </div>
+
+
+        <div class="modal modal-center modal-dark" id="contactModal" tabindex="-1" role="dialog"
+            aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i class="pe-7s-close pe-2x"></i></span>
+                        </button>
+                        <h2 class="modal-title" id="contactModalLabel">Contact Us</h2>
+                        <p class="lead text-center text-light p-2">
+                            Have a question? Want to know more about our super awesome project? Just send us a message.
+                        </p>
+                        <form class="pr-4 pl-4 pb-4" id="phpcontactform" action="php/contact.php" method="post">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group md-form">
+                                        <input type="text" name="fname" class="form-control input-material"
+                                            autocomplete="off" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label class>First Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group md-form">
+                                        <input type="email" name="email" class="form-control input-material"
+                                            autocomplete="off" required>
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label class>Email Address</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group md-form">
+                                <textarea name="message" class="form-control input-material" rows="5"
+                                    required></textarea>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class>Your Message</label>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-lg btn-outline" id="js-contact-btn">Send
+                                    Message</button>
+                                <div id="js-contact-result" data-success-msg="Success, Please check your email."
+                                    data-error-msg="Oops! Something went wrong"></div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- <section class="second">
-        <div class="second-section">
-            <video playsinline loop muted autoplay id="second" src="#">
-            </video>
-            <div class="second-romb">
-                <div class="second-romb-top">
-                    <img src="./source/images/romb.svg" alt="">
-                </div>
-                <div class="second-romb-bottom">
-                    <img src="./source/images/romb.svg" alt="">
-                </div>
-            </div>
-        </div>
-    </section> -->
     <section class="third">
         <div class="container">
             <div class="cards">
@@ -72,7 +191,8 @@
                     <div class="card">
                         <p class="card-date">1 декабря, 2024</p>
                         <h3 class="card-title">Подписка на месяц! Fashion Event Moscow</h3>
-                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир стильной жизни и уникальных
+                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир
+                            стильной жизни и уникальных
                             в ...</p>
                         <a class="card-link" href="#">Подробнее ...</a>
                         <button>
@@ -86,7 +206,8 @@
                     <div class="card">
                         <p class="card-date">1 декабря, 2024</p>
                         <h3 class="card-title">Подписка на месяц! Fashion Event Moscow</h3>
-                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир стильной жизни и уникальных
+                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир
+                            стильной жизни и уникальных
                             в ...</p>
                         <a class="card-link" href="#">Подробнее ...</a>
                         <button>
@@ -100,7 +221,8 @@
                     <div class="card">
                         <p class="card-date">1 декабря, 2024</p>
                         <h3 class="card-title">Подписка на месяц! Fashion Event Moscow</h3>
-                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир стильной жизни и уникальных
+                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир
+                            стильной жизни и уникальных
                             в ...</p>
                         <a class="card-link" href="#">Подробнее ...</a>
                         <button>
@@ -114,7 +236,8 @@
                     <div class="card">
                         <p class="card-date">1 декабря, 2024</p>
                         <h3 class="card-title">Подписка на месяц! Fashion Event Moscow</h3>
-                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир стильной жизни и уникальных в ...</p>
+                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир
+                            стильной жизни и уникальных в ...</p>
                         <a class="card-link" href="#">Подробнее ...</a>
                         <button>
                             Получить бесплатный билет
@@ -127,7 +250,8 @@
                     <div class="card">
                         <p class="card-date">1 декабря, 2024</p>
                         <h3 class="card-title">Подписка на месяц! Fashion Event Moscow</h3>
-                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир стильной жизни и уникальных
+                        <p class="card-text">Подписка на месяц! Fashion Event Moscow — это ваш личный пропуск в мир
+                            стильной жизни и уникальных
                             в ...</p>
                         <a class="card-link" href="#">Подробнее ...</a>
                         <button>
@@ -214,8 +338,7 @@
                     </svg>
                 </a>
                 <a href="#">
-                    <svg width="28px" height="28px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
-                        fill="none">
+                    <svg width="28px" height="28px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
                         <g fill="#a79fbe">
                             <path
                                 d="M4.5 1L2 3.5v9h3V15l2.5-2.5h2L14 8V1H4.5zM13 7.5l-2 2H9l-1.75 1.75V9.5H5V2h8v5.5z" />
