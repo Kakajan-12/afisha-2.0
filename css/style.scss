@@ -115,77 +115,69 @@ a {
 }
 .main-text {
   position: absolute;
-  font-size: 10rem;
+  font-size: 5rem;
   font-family: Ubuntu;
   text-transform: uppercase;
-  top: 50%;
   transform: translate(0, -50%);
   margin: 0;
   -webkit-text-stroke: 2px #fff;
   mix-blend-mode: lighten;
   transition: all ease-in-out 0.7s;
-  @media (max-width: 990px) {
-    font-size: 7em;
+  opacity: 0;
+  @media (max-width: 768px) {
+    font-size: 4em;
   }
   @media (max-width: 576px) {
-    font-size: 4em;
+    font-size: 3em;
   }
   @media (max-width: 457px) {
     font-size: 3em;
   }
 }
-.main-text:nth-child(1) {
-  left: -100%;
-}
-.main-text:nth-child(1).active {
-  left: 50%;
+
+.main-text-left {
+  left: 175px;
+  top: 33%;
   transform: translate(-50%, -50%);
+  @media (max-width: 768px) {
+    left: 125px;
+    top: 35%;
+  }
+  @media (max-width: 576px) {
+    left: 105px;
+    top: 35%;
+  }
 }
-.main-text:nth-child(2) {
-  top: -100%;
+
+@keyframes mainText {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.5;
+  }
+  100% {
+    scale: 1;
+  }
 }
-.main-text:nth-child(2).active {
-  top: 50%;
+
+.main-text-top {
+  top: 180px;
+  @media (max-width:768px) {
+    top: 140px;
+  }
 }
-.main-text:nth-child(3) {
-  right: -100%;
-  transform: translate(50%, -50%);
+
+.main-text-right {
+  right: 5% !important;
+  top: 35%;
 }
-.main-text:nth-child(3).active {
-  right: 50%;
-}
-.main-text:nth-child(4) {
-  bottom: -100%;
-  top: unset;
-}
-.main-text:nth-child(4).active {
-  bottom: 50%;
+
+.main-text-bottom {
+  bottom: 180px;
   transform: translate(0, 50%);
-}
-
-.main-text-left.active {
-  @media (max-width: 576px) {
-    left: 25% !important;
-    top: 35%;
-  }
-}
-
-.main-text-top.active {
-  @media (max-width: 576px) {
-    top: 20% !important;
-  }
-}
-
-.main-text-right.active {
-  @media (max-width: 576px) {
-    right: 20% !important;
-    top: 35%;
-  }
-}
-
-.main-text-bottom.active {
-  @media (max-width: 576px) {
-    bottom: 20% !important;
+  @media (max-width:768px) {
+    bottom: 140px;
   }
 }
 

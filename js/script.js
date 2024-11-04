@@ -1,17 +1,17 @@
 const arrows = document.querySelectorAll(".main-arrow");
 
 const texts = document.querySelectorAll(".main-text");
+let currentIndex = 0;
 
-arrows.forEach((arrow, i) => {
-    arrow.addEventListener("click", () => {
-        texts.forEach((text) => {
-          text.classList.remove("active")
-      })
-    texts[i].classList.add("active");
-    console.log("click",texts[i]);
-  });
-});
+function showNextText() {
+  if (currentIndex < texts.length) {
+    texts[currentIndex].style.opacity = 1;
+    currentIndex++;
+    setTimeout(showNextText, 1000);
+  }
+}
 
+showNextText();
 
 const video = document.getElementById("main-video");
 
@@ -23,11 +23,11 @@ video.addEventListener("ended", function () {
 });
 
 
-const video2 = document.getElementById("second");
+// const video2 = document.getElementById("second");
 
-video2.src =
-  "./source/Gen_3_Alpha_Turbo_669305172,_Make_an_action_anima,_DALL·E_2024_10.mp4";
-video2.addEventListener("ended", function () {
-  video2.currentTime = 0;
-  video2.play();
-});
+// video2.src =
+//   "./source/Gen_3_Alpha_Turbo_669305172,_Make_an_action_anima,_DALL·E_2024_10.mp4";
+// video2.addEventListener("ended", function () {
+//   video2.currentTime = 0;
+//   video2.play();
+// });
