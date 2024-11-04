@@ -59,16 +59,16 @@ a {
   img {
     width: 50px;
   }
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     width: 120px;
     height: 120px;
   }
 }
-@media (hover:hover) {
+@media (hover: hover) {
   .main-arrow:hover {
-  width: 170px;
-  height: 170px;
-}
+    width: 170px;
+    height: 170px;
+  }
 }
 // .main-arrow:hover {
 //   width: 170px;
@@ -124,13 +124,13 @@ a {
   -webkit-text-stroke: 2px #fff;
   mix-blend-mode: lighten;
   transition: all ease-in-out 0.7s;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     font-size: 7em;
   }
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     font-size: 4em;
   }
-  @media (max-width:457px) {
+  @media (max-width: 457px) {
     font-size: 3em;
   }
 }
@@ -200,7 +200,7 @@ a {
   bottom: -152px;
   width: 100%;
   transform: rotate(-180deg) translateY(99%);
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     bottom: -105px;
   }
   img {
@@ -218,11 +218,11 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     scale: 1.4;
     top: 60%;
   }
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     scale: 1.8;
     top: 75%;
   }
@@ -267,28 +267,10 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   height: 100%;
   padding: 25px;
-  h3 {
-    font-family: "Inter", "Arial", "sans-serif";
-    font-weight: 600;
-    font-size: 19px;
-    color: #1c0c3d;
-    text-transform: none;
-    margin: 0.5em 0;
-    text-align: center;
-    height: 100%;
-  }
-  p {
-    font-family: "Inter", "Arial", "sans-serif";
-    font-weight: normal;
-    font-size: 15px;
-    color: #1c0c3d;
-    margin-bottom: 25px;
-    text-align: center;
-    height: 100%;
-  }
+  
   button {
     background-color: #000;
     bottom: 16px;
@@ -302,6 +284,42 @@ a {
     color: #fff;
     border: none;
   }
+}
+
+.card-date {
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: normal;
+  font-size: 15px;
+  color: #1c0c3d;
+  height: 100%;
+}
+
+.card-title {
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: 600;
+  font-size: 19px;
+  color: #1c0c3d;
+  text-transform: none;
+  margin: 0.5em 0;
+  height: 100%;
+}
+
+.card-text {
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: normal;
+  font-size: 15px;
+  color: #1c0c3d;
+  margin-bottom: 15px;
+  height: 100%;
+}
+
+.card-link{
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: normal;
+  font-size: 15px;
+  color: #1c0c3d;
+  height: 100%;
+  margin-bottom: 10px;
 }
 
 footer {
@@ -341,7 +359,7 @@ footer {
   justify-content: center;
   margin: auto;
   max-width: 500px;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     flex-direction: column;
   }
 
@@ -372,7 +390,7 @@ footer {
     background-color: #5a24b1;
     border: none;
     margin-left: -100px;
-    @media (max-width:576px) {
+    @media (max-width: 576px) {
       margin-left: unset;
       margin-top: 10px;
     }
@@ -382,7 +400,7 @@ footer {
   padding: 80px 0;
   display: flex;
   justify-content: space-between;
-  @media (max-width:576px) {
+  @media (max-width: 576px) {
     flex-direction: column;
     align-items: center;
   }

@@ -362,30 +362,11 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   height: 100%;
   padding: 25px;
-}
-.card h3 {
-  font-family: "Inter", "Arial", "sans-serif";
-  font-weight: 600;
-  font-size: 19px;
-  color: #1c0c3d;
-  text-transform: none;
-  margin: 0.5em 0;
-  text-align: center;
-  height: 100%;
-}
-.card p {
-  font-family: "Inter", "Arial", "sans-serif";
-  font-weight: normal;
-  font-size: 15px;
-  color: #1c0c3d;
-  margin-bottom: 25px;
-  text-align: center;
-  height: 100%;
 }
 .card button {
   background-color: #000;
@@ -403,6 +384,42 @@ a {
   font-weight: 600;
   color: #fff;
   border: none;
+}
+
+.card-date {
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: normal;
+  font-size: 15px;
+  color: #1c0c3d;
+  height: 100%;
+}
+
+.card-title {
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: 600;
+  font-size: 19px;
+  color: #1c0c3d;
+  text-transform: none;
+  margin: 0.5em 0;
+  height: 100%;
+}
+
+.card-text {
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: normal;
+  font-size: 15px;
+  color: #1c0c3d;
+  margin-bottom: 15px;
+  height: 100%;
+}
+
+.card-link {
+  font-family: "Inter", "Arial", "sans-serif";
+  font-weight: normal;
+  font-size: 15px;
+  color: #1c0c3d;
+  height: 100%;
+  margin-bottom: 10px;
 }
 
 footer {
