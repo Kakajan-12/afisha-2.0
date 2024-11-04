@@ -16,7 +16,7 @@ a {
 }
 @media (max-width: 576px) {
   .main {
-    height: 90vh;
+    height: 85vh;
   }
 }
 
