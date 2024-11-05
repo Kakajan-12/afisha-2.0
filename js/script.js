@@ -13,9 +13,11 @@ setTimeout(() => {
 
 const video = document.getElementById("main-video");
 
-video.src =
-  "./source/Gen_3_Alpha_Turbo_1125522594,_Make_an_action_anima,_DALL·E_2024.mp4";
-video.addEventListener("ended", function () {
-  video.currentTime = 0;
-  video.play();
-});
+
+  video.src =
+    "./source/Gen_3_Alpha_Turbo_1125522594,_Make_an_action_anima,_DALL·E_2024.mp4";
+  video.addEventListener("ended", function () {
+    video.currentTime = 0;
+    video.play();
+  });
+
