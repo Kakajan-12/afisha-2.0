@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
   const texts = document.querySelectorAll(".main-text");
   let delay = 500;
 
@@ -7,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         item.style.opacity = 1;
         item.style.animationDelay = `${index * delay}ms`;
-        item.classList.add("appear");
+        item.classList.add("animation");
       }, index * delay);
     });
   }, 2000);
@@ -19,5 +18,4 @@ document.addEventListener("DOMContentLoaded", () => {
   video.addEventListener("ended", function () {
     video.currentTime = 0;
     video.play();
-  });
 });
