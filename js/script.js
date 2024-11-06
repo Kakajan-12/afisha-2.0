@@ -17,5 +17,3 @@
     video.currentTime = 0;
     video.play();
   });
-
-  let check = 0
