@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
           video.src = getRandomVideo();
           video.style.top = "unset";
           video.style.left = "unset";
-          video.style.transform = "unset";
+          video.style.transform = "translate(-5%, 10%)";
           video.style.scale = "1.4";
           video.addEventListener("ended", function () {
             video.currentTime = 0;
