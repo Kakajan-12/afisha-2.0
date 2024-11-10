@@ -24,6 +24,7 @@ window.onload = function () {
       video.style.top = "unset";
       video.style.left = "unset";
       video.style.transform = "unset";
+      video.style.scale = "1.2";
       video.addEventListener("ended", function () {
         video.currentTime = 0;
         video.play();
