@@ -1,3 +1,12 @@
+function setFullHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+  console.log("runned");
+}
+
+window.addEventListener("resize", setFullHeight);
+window.addEventListener("load", setFullHeight);
+
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
 
@@ -49,14 +58,6 @@ window.addEventListener("load", function () {
     }
     updateVideoSource();
     window.addEventListener("resize", updateVideoSource);
-
-    function setFullHeight() {
-      const vh = window.innerHeight * 0.01; // 1% высоты окна
-      document.documentElement.style.setProperty("--vh", `${vh}px`); // Устанавливаем кастомное свойство
-    }
-
-    window.addEventListener("resize", setFullHeight);
-    window.addEventListener("load", setFullHeight);
 
     document.body.style.overflow = "auto";
   }, 2000);
