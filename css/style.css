@@ -36,7 +36,7 @@ a {
 }
 @media (max-width: 576px) {
   .main {
-    min-height: 100%;
+    height: calc(100vh - 60px);
   }
 }
 
