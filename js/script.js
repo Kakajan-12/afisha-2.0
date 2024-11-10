@@ -9,11 +9,44 @@ texts.forEach((item, index) => {
   }, index * delay);
 });
 
-const video = document.getElementById("main-video");
 
-video.src =
-  "./source/Gen_3_Alpha_Turbo_1125522594,_Make_an_action_anima,_DALL·E_2024.mp4";
-video.addEventListener("ended", function () {
-  video.currentTime = 0;
-  video.play();
-});
+function updateVideoSource() {
+  const video = document.getElementById("main-video");
+
+  if (window.innerWidth <= 1024) {
+    const videos = [
+      "./source/mobile1.mp4",
+      "./source/mobile2.mp4",
+      "./source/mobile3.mp4",
+    ];
+
+    function getRandomVideo() {
+      const randomIndex = Math.floor(Math.random() * videos.length)
+      return videos[randomIndex]
+    }
+    video.src = getRandomVideo();
+    video.style.top = "unset";
+    video.style.left = "unset";
+    video.style.transform = "unset";
+    video.addEventListener("ended", function () {
+      video.currentTime = 0;
+      video.play();
+    });
+  } else {
+    video.src = "./source/desktop.mp4";
+    video.style.top = "50%";
+    video.style.left = "50%";
+    video.style.transform = "translate(-50%, -50%)";
+    video.addEventListener("ended", function () {
+      video.currentTime = 0;
+      video.play();
+    });
+    
+  }
+
+  video.load();
+}
+
+updateVideoSource();
+
+window.addEventListener("resize", updateVideoSource);

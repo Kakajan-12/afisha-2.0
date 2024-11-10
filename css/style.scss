@@ -29,10 +29,10 @@ a {
   width: 100%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(50%, -40%);
   @media (max-width: 990px) {
     top: 65%;
-    scale: 1.5;
+    scale: unset;
   }
 }
 .bg {
@@ -69,10 +69,7 @@ a {
     height: 170px;
   }
 }
-// .main-arrow:hover {
-//   width: 170px;
-//   height: 170px;
-// }
+
 .main-arrow-left {
   left: -30px;
   top: 50%;
@@ -101,10 +98,6 @@ a {
   img {
     transform: rotate(-90deg);
   }
-  // @media (max-width:490px) {
-  //   bottom: unset;
-  //   top: 70%;
-  // }
 }
 
 .main-content {
@@ -114,7 +107,8 @@ a {
 }
 .main-text {
   position: absolute;
-  font-size: 5rem;
+  // font-size: 5rem;
+  font-size: clamp(3rem, 5vw + 1rem, 5rem);
   font-family: Ubuntu;
   text-transform: uppercase;
   transform: translate(0, -50%);
@@ -123,15 +117,15 @@ a {
   mix-blend-mode: lighten;
   transition: all ease-in-out 0.7s;
   opacity: 0;
-  @media (max-width: 768px) {
-    font-size: 4em;
-  }
-  @media (max-width: 576px) {
-    font-size: 3em;
-  }
-  @media (max-width: 457px) {
-    font-size: 3em;
-  }
+  // @media (max-width: 768px) {
+  //   font-size: 4em;
+  // }
+  // @media (max-width: 576px) {
+  //   font-size: 3em;
+  // }
+  // @media (max-width: 457px) {
+  //   font-size: 3em;
+  // }
 }
 
 .main-text-left {
@@ -152,7 +146,7 @@ a {
 .main-text-top {
   top: 180px;
   animation: top 1s;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     top: 140px;
   }
 }
@@ -170,29 +164,29 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     bottom: 175px;
   }
 }
 
-.main-first-span{
-font-size: 3rem;
-@media (max-width:768px) {
-  font-size: 2rem;
-}
-@media (max-width:576px) {
-  font-size: 1rem;
-}
+.main-first-span {
+  font-size: clamp(1rem, 5vw + 1rem, 3rem);
+  // @media (max-width: 768px) {
+  //   font-size: 2rem;
+  // }
+  // @media (max-width: 576px) {
+  //   font-size: 1rem;
+  // }
 }
 
-.main-second-span{
-font-size: 4rem;
-@media (max-width:768px) {
-  font-size: 3rem;
-}
-@media (max-width:576px) {
-  font-size: 2rem;
-}
+.main-second-span {
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  // @media (max-width: 768px) {
+  //   font-size: 3rem;
+  // }
+  // @media (max-width: 576px) {
+  //   font-size: 2rem;
+  // }
 }
 
 .main-text-bottom .animation {
@@ -200,24 +194,48 @@ font-size: 4rem;
 }
 
 @keyframes left {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @keyframes top {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @keyframes right {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 @keyframes bottom {
-  0%   {scale: 1}
-  50%  {scale: 1.2;}
-  100% {scale:1;}
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 .second {
