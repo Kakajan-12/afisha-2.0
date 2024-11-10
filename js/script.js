@@ -2,15 +2,6 @@ window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
 
   setTimeout(() => {
-    const texts = document.querySelectorAll(".main-text");
-    let delay = 500;
-    texts.forEach((item, index) => {
-      setTimeout(() => {
-        item.style.opacity = 1;
-        item.style.animationDelay = `${index * delay}ms`;
-        item.classList.add("appear");
-      }, index * delay);
-    });
     function updateVideoSource() {
       const video = document.getElementById("main-video");
       if (window.innerWidth <= 1024) {
@@ -43,6 +34,18 @@ window.addEventListener("load", function () {
         });
       }
       video.load();
+      video.addEventListener("canplay", function () {
+        preloader.style.display = "none";
+        const texts = document.querySelectorAll(".main-text");
+        let delay = 500;
+        texts.forEach((item, index) => {
+          setTimeout(() => {
+            item.style.opacity = 1;
+            item.style.animationDelay = `${index * delay}ms`;
+            item.classList.add("appear");
+          }, index * delay);
+        });
+      });
     }
     updateVideoSource();
     window.addEventListener("resize", updateVideoSource);
@@ -55,7 +58,6 @@ window.addEventListener("load", function () {
     window.addEventListener("resize", setFullHeight);
     window.addEventListener("load", setFullHeight);
 
-    preloader.style.display = "none";
     document.body.style.overflow = "auto";
   }, 2000);
 });
