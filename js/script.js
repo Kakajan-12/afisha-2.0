@@ -10,7 +10,6 @@ window.addEventListener("load", setFullHeight);
 window.addEventListener("load", function () {
   const preloader = document.getElementById("preloader");
 
-  setTimeout(() => {
     function updateVideoSource() {
       const video = document.getElementById("main-video");
       if (window.innerWidth <= 1024) {
@@ -58,7 +57,5 @@ window.addEventListener("load", function () {
     }
     updateVideoSource();
     window.addEventListener("resize", updateVideoSource);
-
     document.body.style.overflow = "auto";
-  }, 2000);
 });
