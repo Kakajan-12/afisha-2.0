@@ -1,15 +1,13 @@
-
-
 window.addEventListener("load", function () {
-  function setFullHeight() {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-    console.log("runned");
-  }
+  // function setFullHeight() {
+  //   const vh = window.innerHeight * 0.01;
+  //   document.documentElement.style.setProperty("--vh", `${vh}px`);
+  //   console.log("runned");
+  // }
 
-  window.addEventListener("resize", setFullHeight);
-  window.addEventListener("load", setFullHeight);
-  
+  // window.addEventListener("resize", setFullHeight);
+  // window.addEventListener("load", setFullHeight);
+
   const preloader = document.getElementById("preloader");
 
     function updateVideoSource() {

@@ -36,11 +36,6 @@ a {
 }
 @media (max-width: 576px) {
   .main {
-    height: calc(var(--vh, 1vh) * 100);
-  }
-}
-@media (max-width: 500px) {
-  .main {
     height: 85vh;
   }
 }
