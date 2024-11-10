@@ -1,5 +1,6 @@
 const texts = document.querySelectorAll(".main-text");
 let delay = 500;
+
 texts.forEach((item, index) => {
   setTimeout(() => {
     item.style.opacity = 1;
@@ -7,14 +8,17 @@ texts.forEach((item, index) => {
     item.classList.add("appear");
   }, index * delay);
 });
+
 function updateVideoSource() {
   const video = document.getElementById("main-video");
+
   if (window.innerWidth <= 1024) {
     const videos = [
       "./source/mobile1.mp4",
       "./source/mobile2.mp4",
       "./source/mobile3.mp4",
     ];
+
     function getRandomVideo() {
       const randomIndex = Math.floor(Math.random() * videos.length);
       return videos[randomIndex];
@@ -37,7 +41,10 @@ function updateVideoSource() {
       video.play();
     });
   }
+
   video.load();
 }
+
 updateVideoSource();
+
 window.addEventListener("resize", updateVideoSource);
