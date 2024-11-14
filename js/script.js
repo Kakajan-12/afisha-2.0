@@ -10,26 +10,22 @@ window.addEventListener("load", function () {
 
   const preloader = document.getElementById("preloader");
 
-    function updateVideoSource() {
-      const video = document.getElementById("main-video");
+    // function updateVideoSource() {
+      const videoElement = document.getElementById("main-video");
       if (window.innerWidth <= 1024) {
+        // создаем массив с URL видео
         const videos = [
           "./source/mobile1.mp4",
           "./source/mobile2.mp4",
           "./source/mobile3.mp4",
         ];
-        function getRandomVideo() {
-          const randomIndex = Math.floor(Math.random() * videos.length);
-          return videos[randomIndex];
-        }
-        video.src = getRandomVideo();
-        video.style.top = "unset";
-        video.style.left = "unset";
-        video.style.transform = "translate(-5%, 10%)";
-        video.style.scale = "1.4";
-        video.addEventListener("ended", function () {
-          video.currentTime = 0;
-          video.play();
+
+        // Создаем элементы <video> для каждого видео и добавляем их на страницу
+        videos.forEach((video) => {
+          videoElement.src = video;
+          videoElement.autoplay = true;
+          videoElement.loop = true;
+          videoElement.muted = true;
         });
       } else {
         video.src = "./source/desktop.mp4";
@@ -38,10 +34,9 @@ window.addEventListener("load", function () {
         video.style.transform = "translate(-50%, -50%)";
         video.addEventListener("ended", function () {
           video.currentTime = 0;
-          video.play();
         });
       }
-      video.load();
+      // video.load();
       video.addEventListener("canplay", function () {
         preloader.style.display = "none";
         const texts = document.querySelectorAll(".main-text");
@@ -54,8 +49,8 @@ window.addEventListener("load", function () {
           }, index * delay);
         });
       });
-    }
-    updateVideoSource();
-    window.addEventListener("resize", updateVideoSource);
-    document.body.style.overflow = "auto";
+    // }
+    // updateVideoSource();
+    // window.addEventListener("resize", updateVideoSource);
+    // document.body.style.overflow = "auto";
 });
