@@ -64,12 +64,6 @@ a {
   -webkit-transform: translate(50%, -40%);
           transform: translate(50%, -40%);
 }
-@media (max-width: 990px) {
-  #main-video {
-    top: 65%;
-    scale: unset;
-  }
-}
 
 .bg {
   background: rgba(0, 0, 0, 0.4);
@@ -104,7 +98,7 @@ a {
 .main-arrow img {
   width: 50px;
 }
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .main-arrow {
     width: 120px;
     height: 120px;
@@ -171,7 +165,7 @@ a {
 
 .main-text {
   position: absolute;
-  font-size: clamp(3rem, 5vw + 1rem, 5rem);
+  font-size: clamp(3rem, 4vw + 1rem, 5rem);
   font-family: Ubuntu;
   text-transform: uppercase;
   -webkit-transform: translate(0, -50%);
@@ -210,7 +204,7 @@ a {
   -webkit-animation: top 1s;
           animation: top 1s;
 }
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .main-text-top {
     top: 140px;
   }
@@ -240,18 +234,18 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .main-text-bottom {
-    bottom: 175px;
+    bottom: 190px;
   }
 }
 
 .main-first-span {
-  font-size: clamp(1rem, 5vw + 1rem, 3rem);
+  font-size: clamp(1rem, 2vw + 1rem, 3rem);
 }
 
 .main-second-span {
-  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
 }
 
 .main-text-bottom .animation {

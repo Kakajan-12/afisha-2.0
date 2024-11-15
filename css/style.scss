@@ -49,10 +49,6 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(50%, -40%);
-  @media (max-width: 990px) {
-    top: 65%;
-    scale: unset;
-  }
 }
 .bg {
   background: rgba(0, 0, 0, 0.4);
@@ -77,7 +73,7 @@ a {
   img {
     width: 50px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
     width: 120px;
     height: 120px;
   }
@@ -127,7 +123,7 @@ a {
 .main-text {
   position: absolute;
   // font-size: 5rem;
-  font-size: clamp(3rem, 5vw + 1rem, 5rem);
+  font-size: clamp(3rem, 4vw + 1rem, 5rem);
   font-family: Ubuntu;
   text-transform: uppercase;
   transform: translate(0, -50%);
@@ -136,15 +132,6 @@ a {
   mix-blend-mode: lighten;
   transition: all ease-in-out 0.7s;
   opacity: 0;
-  // @media (max-width: 768px) {
-  //   font-size: 4em;
-  // }
-  // @media (max-width: 576px) {
-  //   font-size: 3em;
-  // }
-  // @media (max-width: 457px) {
-  //   font-size: 3em;
-  // }
 }
 
 .main-text-left {
@@ -165,7 +152,7 @@ a {
 .main-text-top {
   top: 180px;
   animation: top 1s;
-  @media (max-width: 768px) {
+  @media (max-width: 1300px) {
     top: 140px;
   }
 }
@@ -183,29 +170,17 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 768px) {
-    bottom: 175px;
+  @media (max-width: 1300px) {
+    bottom: 190px;
   }
 }
 
 .main-first-span {
-  font-size: clamp(1rem, 5vw + 1rem, 3rem);
-  // @media (max-width: 768px) {
-  //   font-size: 2rem;
-  // }
-  // @media (max-width: 576px) {
-  //   font-size: 1rem;
-  // }
+  font-size: clamp(1rem, 2vw + 1rem, 3rem);
 }
 
 .main-second-span {
-  font-size: clamp(2rem, 5vw + 1rem, 4rem);
-  // @media (max-width: 768px) {
-  //   font-size: 3rem;
-  // }
-  // @media (max-width: 576px) {
-  //   font-size: 2rem;
-  // }
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
 }
 
 .main-text-bottom .animation {
