@@ -21,7 +21,6 @@ body {
           align-items: center;
   font-size: 24px;
   z-index: 1000;
-  display: none;
 }
 
 * {
