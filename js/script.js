@@ -18,9 +18,7 @@ window.addEventListener("load", function () {
         "./source/mobile2.mp4",
         "./source/mobile3.mp4",
       ];
-
       let currentVideoIndex = 0;
-
       video.addEventListener("ended", () => {
         currentVideoIndex++;
         if (currentVideoIndex >= videoSources.length) {
@@ -29,7 +27,6 @@ window.addEventListener("load", function () {
         video.src = videoSources[currentVideoIndex];
         video.play();
       });
-
       video.src = videoSources[currentVideoIndex];
       video.style.top = "unset"
       video.style.transform = "translate(-40%, 5%)";
@@ -41,10 +38,10 @@ window.addEventListener("load", function () {
       video.style.left = "50%";
       video.style.transform = "translate(-50%, -50%)";
       video.addEventListener("ended", function () {
-        video.currentTime = 0;
+        video.play();
       });
     }
-    // video.load();
+    video.load();
     video.addEventListener("canplay", function () {
       preloader.style.display = "none";
       const texts = document.querySelectorAll(".main-text");
