@@ -10,7 +10,6 @@ window.addEventListener("load", function () {
 
   const preloader = document.getElementById("preloader");
 
-  function updateVideoSource() {
     const video = document.getElementById("main-video");
     if (window.innerWidth <= 990) {
       const videoSources = [
@@ -54,8 +53,7 @@ window.addEventListener("load", function () {
         }, index * delay);
       });
     });
-  }
-  updateVideoSource();
+
   window.addEventListener("resize", updateVideoSource);
   document.body.style.overflow = "auto";
 });
